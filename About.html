@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+  <style>
+    header {
+      background-image: url('./Images2/pexels-jacob-morch-457418.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.626);
+      background-repeat: no-repeat;
+      padding-top: 200px;
+      padding-bottom: 150px;
+      text-align: center;
+    }
+
+    body {
+      background-color: black !important;
+    }
+
+    #mainNavbar {
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+
+    .navbar-dark .navbar-brand {
+      font-family: 'Source Serif Pro', serif;
+
+    }
+
+    .navbar-nav .nav-link {
+      font-family: 'Source Serif Pro', serif;
+
+    }
+
+
+    .navbar.scrolled {
+      background: rgb(34, 31, 31);
+      transition: background 500ms;
+    }
+
+    .navbar-nav {
+      margin-left: 150px;
+    }
+
+    .nav-link:hover {
+
+      transform: scale(1.7);
+      font-family: monospace;
+      transition: .5s !important;
+
+      border-bottom: 3px solid white;
+      width: 60%;
+      margin-left: 20px;
+    }
+
+
+    .footer-section {
+      background: #151414;
+      position: relative;
+    }
+
+    .footer-cta {
+      border-bottom: 1px solid #373636;
+    }
+
+    .single-cta i {
+      color: #ff5e14;
+      font-size: 30px;
+      float: left;
+      margin-top: 8px;
+    }
+
+    .cta-text {
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .cta-text h4 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .cta-text span {
+      color: #757575;
+      font-size: 15px;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-pattern img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 330px;
+      background-size: cover;
+      background-position: 100% 100%;
+    }
+
+    .footer-logo {
+      margin-bottom: 30px;
+    }
+
+    .footer-logo img {
+      max-width: 200px;
+    }
+
+    .footer-text p {
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #7e7e7e;
+      line-height: 28px;
+    }
+
+    .footer-social-icon span {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-icon a {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 15px;
+    }
+
+    .footer-social-icon i {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+    }
+
+    .facebook-bg {
+      background: #3B5998;
+    }
+
+    .twitter-bg {
+      background: #55ACEE;
+    }
+
+    .google-bg {
+      background: #DD4B39;
+    }
+
+    .footer-widget-heading h3 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .footer-widget-heading h3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      height: 2px;
+      width: 50px;
+      background: #ff5e14;
+    }
+
+    .footer-widget ul li {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      margin-bottom: 12px;
+    }
+
+    .footer-widget ul li a:hover {
+      color: #ff5e14;
+    }
+
+    .footer-widget ul li a {
+      color: #878787;
+      text-transform: capitalize;
+
+    }
+
+    .yhh {
+      width: 48%;
+    }
+
+    .yoo {
+      width: 48%;
+      border-radius: 50%;
+    }
+
+    .yoo {
+      filter: brightness(70%);
+    }
+
+    .yoo:hover {
+      transform: scale(1.15);
+      transition: .5s;
+      filter: brightness(100%);
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+
+    .navbar-brand {
+      padding-top: 20px !important;
+    }
+
+    .log {
+      width: 5% !important;
+    }
+
+
+
+
+
+    @media screen and (min-width:100px) and (max-width:1200px) {
+      /* navigation */
+
+      .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 50px;
+        max-width: 1400px;
+        margin: auto;
+        width: 100%;
+
+      }
+
+      .navigation .menu-icon {
+        cursor: pointer;
+        float: right;
+        padding: 20px 10px;
+        z-index: 103;
+
+
+      }
+
+      .nav-link:hover {
+        color: green !important;
+        transform: scale(1.4);
+        font-family: monospace;
+        transition: .6s !important;
+        border-bottom: none;
+        border-left: 4px solid green;
+
+        width: 50%;
+      }
+
+      .navigation .menu-icon .nav-icon {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        width: 25px;
+        position: relative;
+        transition: background 0.2s ease-out;
+
+      }
+
+      .navigation .menu-icon .nav-icon::before,
+      .navigation .menu-icon .nav-icon::after {
+        background-color: #ffffffcc;
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all ease-out 0.2s;
+      }
+
+      .navigation .menu-icon .nav-icon::before {
+        top: 8px;
+      }
+
+      .navigation .menu-icon .nav-icon::after {
+        top: -8px;
+      }
+
+      .navigation .menu-btn:checked~.menu-icon .nav-icon {
+        background-color: transparent;
+        ;
+        ;
+        ;
+      }
+
+      .navigation .menu-btn:checked~.menu-icon .nav-icon::before {
+        transform: rotate(-45deg);
+        top: 0px;
+      }
+
+      .navigation .menu-btn:checked~.menu-icon .nav-icon::after {
+        transform: rotate(45deg);
+        top: 0px;
+      }
+
+      .menu-icon:hover {
+        background-color: rgba(0, 0, 0, 0.404) !important;
+        border: 0px solid green;
+        border-radius: 20%;
+        transform: scale(1.3);
+        transition: .5s;
+      }
+
+      .menu-btn {
+        display: none;
+
+      }
+
+      .icon {
+        display: flex !important;
+        justify-content: space-between !important;
+      }
+
+      /* --menu------- */
+      .menu {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #111111eb;
+        z-index: 102;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation: fade 0.3s;
+      }
+
+      .navbar-nav {
+        display: none;
+      }
+
+      .menu li a {
+        color: #ffffff;
+        margin: 0px 40px;
+        font-size: 2rem;
+        font-family: monoton;
+        transition: all ease 0.3s;
+      }
+
+      .menu li a:hover {
+        font-size: 2.3rem;
+        color: #e70634;
+        transition: all ease 0.3s;
+      }
+
+      .navigation .menu-btn:checked~.menu {
+        display: flex;
+        list-style: none;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+
+    @media screen and (min-width:900px) and (max-width:1200px) {
+      .menu-icon {
+        margin-left: 400px;
+        background-color: green;
+        border-radius: 20%;
+        margin-top: 30px !important;
+      }
+
+      .navigation .menu-btn:checked~.menu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-link:hover {
+        color: green !important;
+        transform: scale(1.4);
+        font-family: monospace;
+        transition: .6s !important;
+        border-bottom: none;
+        border-left: 4px solid green;
+
+        width: 50%;
+      }
+    }
+
+
+    @media screen and (min-width:680px) and (max-width:900px) {
+      .menu-icon {
+        margin-left: 140px;
+        background-color: green;
+        border-radius: 20%;
+        margin-top: 30px !important;
+      }
+
+      .navigation .menu-btn:checked~.menu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-link:hover {
+        color: green !important;
+        transform: scale(1.4);
+        font-family: monospace;
+        transition: .6s !important;
+        border-bottom: none;
+        border-left: 4px solid green;
+
+        width: 50%;
+      }
+      .nav-link{
+  font-size: 24px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+    }
+
+
+    @media screen and (min-width:100px) and (max-width:680px) {
+      .menu-icon {
+        margin-left: -50px;
+        background-color: green;
+        border-radius: 20%;
+        margin-bottom: 100px !important;
+        margin-bottom: 5px !important;
+
+      }
+
+      header h1 {
+        font-size: 25px !important;
+      }
+      .nav-link{
+  font-size: 24px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+      header {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      .nav-link:hover {
+        color: green !important;
+        transform: scale(1.4);
+        font-family: monospace;
+        transition: .6s !important;
+        border-bottom: none;
+        border-left: 4px solid green;
+
+        width: 50%;
+      }
+
+      .navigation .menu-btn:checked~.menu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar-brand {
+        padding-top: 0px !important;
+        font-size: 25px !important;
+      }
+
+      .container {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+
+      }
+      .uhn {
+        position: relative;
+        margin: 0px !important;
+        padding: 0px !important;
+      
+      }
+    }
+
+    @media screen and (min-width:100px) and (max-width:300px) {
+
+      .navbar-brand {
+        padding-top: 0px !important;
+        font-size: 20px !important;
+      }
+    }
+
+    @media screen and (min-width:100px) and (max-width:900px) {
+      .log {
+        width: 60px !important;
+      }
+    }
+
+    @media screen and (min-width:100px) and (max-width:1000px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .yhh {
+        width: 100% !important;
+      }
+
+      .yoo {
+        width: 100% !important;
+        border-radius: 0;
+        filter: brightness(100%) !important;
+      }
+
+      .con1 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .con2 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-md py-0  bg-success">
+    <a href="#" class="navbar-brand uhn" style="font-family: fantasy; font-size: 40px; ">Living Proof Church</a>
+    <div>
+      <!-- Navigation -->
+      <nav class="navigation  pt-4">
+
+        <!-- menu-btn   -->
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+          <span class="nav-icon"></span>
+
+        </label>
+
+
+
+
+        <!-- menu -->
+        <ul class="menu">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link text-white px-4 fs-5">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="./About.html" class="nav-link text-white px-4 fs-5">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="./service.html" class="nav-link text-white px-4 fs-5 fs-5">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="./gallery.html" class="nav-link text-white px-4 fs-5">GALLERY</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link text-white px-4 fs-5">CONTACT</a>
+          </li>
+
+        </ul>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navLinks">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link text-white px-4">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="./About.html" class="nav-link text-white px-4">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a href="./service.html" class="nav-link text-white px-4">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a href="./gallery.html" class="nav-link text-white px-4">GALLERY</a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html" class="nav-link text-white px-4">CONTACT</a>
+        </li>
+
+
+    </div>
+  </nav>
+
+  <header class="text-center">
+
+    <h1 style="font-size: 50px; font-family: serif;"><i> So then neither is he that planteth anything ,<br> neither <b
+          class="text-success">he that watereth; but God <br> that giveth the increase</b> </i><br><br> <span
+        style="font-family: cursive; color: burlywood;">1 CORINTHIANS 3:7</span> </h1>
+
+  </header>
+
+
+  <div class="container mt-4">
+    <p class="text-success text-center" style="text-transform: uppercase;">A little bit more </p>
+    <h1 class="text-white text-center">About <b class="text-success border-bottom border-5 border-white pb-3"
+        style="border-width: 20cap;"> Living Proof</b></h1> <br><br>
+
+    <p class="fs-4 text-white">Living Proof church is a place where we come together to worship, Praise, serve the Lord
+      . The church is under the Reedem Christian church of God (RCCG) ...RCCG was founded by Rev. Josiah Akindayomi and
+      now overseen by Pastor E.A Adeboye . Living Proof church has grown over the years to be a great house of God</p>
+  </div>
+  <br>
+  <div class="container d-flex justify-content-between my-5 yep">
+    <div class="yhh" style=" padding-top: 100px; ">
+      <h1 class="text-white" style="font-size: 50px;"><b class="text-success"> Prayer</b> Session</h1> <br>
+      <p class="fs-3 text-white">Prayer in all churches is an important practice...The church Service must be started
+        with an opening Prayer and also close with Prayer</p>
+    </div>
+
+    <img src="./Images2/IMG_0607.JPG" class="yoo" style="border: 0px solid white;" alt="">
+  </div>
+  <hr>
+  <div class="container d-flex justify-content-between my-5 con2">
+    <img src="./Images2/IMG-20230328-WA0000.jpg" class="yoo" height="520px" style="border: 0px solid white;" alt="">
+
+    <div class="yhh" style=" margin-top: 100px;">
+      <h1 class="text-success">Praise and <b class="text-white"> Worship</b></h1> <br>
+      <p class="fs-3 text-white">We gather to worship the lord for all his great works in our lives Our praise and
+        worship session is done before the main sermon to give God all the glory</p>
+    </div>
+  </div>
+
+
+  <div class="container d-flex justify-content-between  my-5">
+    <div class="yhh" style=" margin-top: 100px;">
+      <h1 class="text-success">Musicals</h1> <br>
+      <p class="fs-3 text-white">We have profesional Musicians with the passion of praising the lord with their
+        instuments. We also enroll people on instrument classes which are for free</p>
+    </div>
+
+    <img src="./Images2/IMG-20230328-WA0010.jpg" class="yoo" style="border: 0px solid white;" alt="">
+
+
+  </div>
+
+  <div class="container d-flex justify-content-between my-5 con1">
+    <img src="./Images2/IMG_0763.JPG" class="yoo" height="520px" style="border: 0px solid white;" alt="">
+
+    <div class="yhh" style="width: 48%; margin-top: 100px;">
+      <h1 class="text-success"><b class="text-success">Sermon</b></h1> <br>
+      <p class="fs-3 text-white">The word of God is made known to members of our church .These words are not only
+        touching but life saving We preach the word of God to any kind of person.During this process, beneficial
+        questions are asked.</p>
+    </div>
+  </div>
+
+
+
+  <footer class="footer-section">
+    <div class="container-fluid">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find us</h4>
+                <span>21 prince regent street2 McMillian Stockton On toes TS18 IDB.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span>+234 8064573753</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span>donaldayodeji@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+
+              </div>
+              <div class="footer-text">
+                <p>Come and join us now at Living faith Church</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+
+
+                <li><a href="#">Expert Team</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Subscribe</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address">
+                  <button><i class="fab fa-telegram-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Terms</a></li>
+
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

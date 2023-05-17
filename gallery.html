@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        
+body{
+    background-color: black !important;
+}
+#mainNavbar{
+	padding-left:  50px;
+	padding-top: 20px;
+}
+
+.navbar-dark .navbar-brand{
+font-family: 'Source Serif Pro', serif;
+
+}
+
+.navbar-nav .nav-link{
+	font-family: 'Source Serif Pro', serif;
+
+}
+
+
+.navbar.scrolled {
+    background: rgb(34, 31, 31);
+    transition: background 500ms;
+}
+
+.navbar-nav{
+margin-left: 150px;
+}
+
+.nav-link:hover{
+    color: black !important;
+transform: scale(1.3);
+ font-family: monospace;
+ transition: .5s !important;
+
+ border-bottom: 4px solid white;
+ width: 60%;
+ margin-left: 20px;}
+
+ .background{
+    background-image: url('./Images2/R\ \(2\).jpg');
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.666);
+    background-attachment: fixed;
+ }
+ .img-fluid{
+      filter: brightness(70%);
+    }
+
+    .img-fluid:hover{
+      transform: scale(1.15);
+      transition: .5s;
+ filter: brightness(100%);
+    }
+
+       
+.menu{
+  display: none;
+}
+  
+.menu-btn{
+  display: none;
+}
+
+
+.navbar-brand{
+ padding-top: 20px !important;
+}
+.log{
+  width: 5% !important;
+}
+
+
+
+ 
+
+@media screen and (min-width:100px) and (max-width:1200px) {
+     /* navigation */
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+max-width: 1400px;
+margin: auto;
+width: 100%;
+
+}
+
+.navigation .menu-icon{
+cursor: pointer;
+float: right;
+padding: 20px 10px;
+z-index: 103;
+
+
+}
+.img-fluid{
+      filter: brightness(100%);
+    }
+.navigation .menu-icon .nav-icon{
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    transition: background 0.2s ease-out ;
+
+}
+.nav-link{
+  font-size: 24px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+      .background{
+        padding-top: 90px !important;
+        padding-bottom: 90px !important;
+background-size: 700px;
+      
+      }
+
+
+.navigation .menu-icon .nav-icon::before,
+.navigation .menu-icon .nav-icon::after{
+    background-color: #ffffffcc;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all ease-out 0.2s;
+}
+.navigation .menu-icon .nav-icon::before{
+    top: 8px;
+}
+.navigation .menu-icon .nav-icon::after{
+    top: -8px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;;;;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+top: 0px;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top: 0px;
+}
+
+.menu-icon:hover{
+background-color: rgba(0, 0, 0, 0.404) !important;
+border: 0px solid green;
+border-radius: 20%;
+transform: scale(1.3);
+transition: .5s;
+}
+.menu-btn{
+    display: none;
+
+}
+.icon{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* --menu------- */
+.menu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #111111eb;
+    z-index: 102;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation:fade 0.3s;
+}
+.navbar-nav{
+  display: none;
+}
+
+.menu li a{
+    color: #ffffff;
+    margin: 0px 40px;
+    font-size: 2rem;
+    font-family: monoton;
+transition: all ease 0.3s;
+}
+
+.menu li a:hover{
+    font-size: 2.3rem;
+    color: #e70634;
+    transition: all ease 0.3s;
+}
+
+.navigation .menu-btn:checked ~ .menu{
+    display: flex;
+    list-style: none;
+}
+
+@keyframes fade{
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+}
+}
+}
+
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+.menu-icon{
+  margin-left: 400px;
+  background-color: green;
+  border-radius: 20%;
+  margin-top: 30px !important;
+}
+
+.navigation .menu-btn:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+.nav-link:hover{
+    color: green !important;
+transform: scale(1.4);
+ font-family: monospace;
+ transition: .6s !important;
+border-bottom: none;
+ border-left: 4px solid green;
+
+ width: 50%;}
+}
+
+
+@media screen and (min-width:680px) and (max-width:900px) {
+.menu-icon{
+  margin-left: 140px;
+  background-color: green;
+  border-radius: 20%;
+margin-top: 30px !important;
+}
+
+.navigation .menu-btn:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+.nav-link:hover{
+    color: green !important;
+transform: scale(1.4);
+ font-family: monospace;
+ transition: .6s !important;
+border-bottom: none;
+ border-left: 4px solid green;
+
+ width: 50%;}
+}
+
+
+@media screen and (min-width:100px) and (max-width:680px) {
+.menu-icon{
+  margin-left: -50px;
+  background-color: green;
+  border-radius: 20%;
+margin-bottom: 100px !important;
+margin-bottom: 5px !important;
+
+}
+.verse{
+  font-size: 20px !important;
+}
+.ims{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.navigation .menu-btn:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+.uhn {
+        position: relative;
+        margin: 0px !important;
+        padding: 0px !important;
+ 
+      }
+.navbar-brand{
+ padding-top: 0px !important;
+font-size: 25px !important;
+}
+.nav-link:hover{
+    color: green !important;
+transform: scale(1.4);
+ font-family: monospace;
+ transition: .6s !important;
+border-bottom: none;
+ border-left: 4px solid green;
+
+ width: 50%;}
+ .nav-link{
+  font-size: 24px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+      header {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+}
+.background{
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+@media screen and (min-width:100px) and (max-width:300px) {
+
+  .navbar-brand{
+ padding-top: 0px !important;
+font-size: 20px !important;
+}
+}
+@media screen and (min-width:100px) and (max-width:900px) {
+.log{
+  width: 60px !important;
+}
+}
+    </style>
+</head>
+<body>
+    <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 bg-success">
+      <a href="#" class ="navbar-brand uhn" style="font-family: fantasy; font-size: 40px; ">Living Proof Church</a>
+      <div>
+        <!-- Navigation -->
+        <nav class="navigation  pt-4">
+      
+          <!-- menu-btn   -->
+          <input type="checkbox" class="menu-btn" id="menu-btn">
+          <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+      
+          </label>
+      
+      
+         
+      
+          <!-- menu -->
+          <ul class="menu">
+            <li class ="nav-item">
+              <a href="./index.html" class="nav-link text-white px-4 fs-5">HOME</a>
+            </li>
+            <li class ="nav-item">
+              <a href="./About.html" class="nav-link text-white px-4 fs-5">ABOUT</a>
+            </li>
+            <li class ="nav-item">
+              <a href="./service.html" class="nav-link text-white px-4 fs-5 fs-5">SERVICES</a>
+            </li>
+            <li class ="nav-item">
+              <a href="./gallery.html" class="nav-link text-white px-4 fs-5">GALLERY</a>
+            </li>
+                      <li class ="nav-item">
+              <a href="./contact.html" class="nav-link text-white px-4 fs-5">CONTACT</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+          <div class ="collapse navbar-collapse" id="navLinks">
+             <ul class ="navbar-nav">
+              <li class ="nav-item">
+                <a href="./index.html" class="nav-link text-white px-4">HOME</a>
+              </li>
+              <li class ="nav-item">
+                <a href="./About.html" class="nav-link text-white px-4">ABOUT</a>
+              </li>
+              <li class ="nav-item">
+                <a href="./service.html" class="nav-link text-white px-4">SERVICES</a>
+              </li>
+              <li class ="nav-item">
+                <a href="./gallery.html" class="nav-link text-white px-4">GALLERY</a>
+              </li>
+                        <li class ="nav-item">
+                <a href="./contact.html" class="nav-link text-white px-4">CONTACT</a>
+              </li>
+              
+          
+            </div> 
+        </nav>
+    
+        <div class="container-fluid text-white background">
+            <i class="fs-2 verse">I am the vine, ye are the branchees: He that abideth in me, and i in him,<br> <b class="text-success"> the same bringeth forth much fruit: for <br> without me ye can do nothing</b></i> <br><br>
+          <h1 style="font-family: cursive; color: burlywood;">John 15:5</h1>
+        </div>
+
+        <h1 class="text-success text-center py-5 ims" style="font-family: monospace;">IMAGES</h1>
+
+
+        
+<div class="container"> 
+    <div class="nxt">
+   <br><br><div class="row">
+   
+
+    
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0000.jpg" style="height: 500px;" width="100%" class="img-fluid" alt="">
+
+      
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0002.jpg" style="height: 500px;" class="img-fluid" alt="">
+
+      
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0005.jpg" style="height: 500px;" class="img-fluid" alt="">
+
+      
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0003.jpg" style="height: 500px;" class="img-fluid" alt="">
+
+      
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0010.jpg" style="height: 500px;" class="img-fluid" alt="">
+
+      
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/R (2).jpg" style="height: 500px;" class="img-fluid" alt="">
+
+      
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG_0763.JPG" style="height: 500px;" class="img-fluid" alt="">
+
+      
+      </div>
+
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0011.jpg" style="height: 500px;" class="img-fluid" alt="">
+      
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG_0667.JPG" style="height: 500px;" class="img-fluid" alt="">
+      
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG-20230328-WA0005.jpg" style="height: 500px;" class="img-fluid" alt="">
+      
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG_0629.JPG" style="height: 500px;" class="img-fluid" alt="">
+      
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <img src="./Images2/IMG_0607.JPG" style="height: 500px;" class="img-fluid" alt="">
+      
+      </div>
+  
+    </div>
+  </div>
+  </div>
+  
+</body>
+</html>

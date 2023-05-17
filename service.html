@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <style>
+      body{
+        background-color: black;
+      }
+        section {
+    padding: 60px 0;
+    min-height: 100vh;
+}
+header {
+      background-image: url('./Images2/1679437119495.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.626);
+      background-repeat: no-repeat;
+      padding-top: 200px;
+      padding-bottom: 150px;
+      text-align: center;
+    }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}.bg-gray {
+  background-color: black;
+}
+
+.site-heading h2 {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.site-heading h2 span {
+  color: #00a01d;
+}
+
+.site-heading h4 {
+  display: inline-block;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+.site-heading h4::before {
+  background: #00a01d none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
+}
+
+.site-heading {
+  margin-bottom: 60px;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+.carousel-shadow .owl-stage-outer {
+  margin: -15px -15px 0;
+  padding: 15px;
+}
+
+.we-offer-area .our-offer-carousel .owl-dots .owl-dot span {
+  background: #ffffff none repeat scroll 0 0;
+  border: 2px solid;
+  height: 15px;
+  margin: 0 5px;
+  width: 15px;
+}
+
+.we-offer-area .our-offer-carousel .owl-dots .owl-dot.active span {
+  background: #00a01d none repeat scroll 0 0;
+  border-color: #00a01d;
+}
+
+.we-offer-area .item {
+  background: #ffffff none repeat scroll 0 0;
+  border-left: 2px solid #00a01d;
+  -moz-box-shadow: 0 0 10px #cccccc;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+  -o-box-shadow: 0 0 10px #cccccc;
+  box-shadow: 0 0 10px #cccccc;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.we-offer-area.text-center .item {
+  background: #ffffff none repeat scroll 0 0;
+  border: medium none;
+  padding: 67px 40px 64px;
+}
+
+.we-offer-area.text-center .item i {
+  background: #00a01d none repeat scroll 0 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 40px;
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+  text-align: center;
+  width: 80px;
+  z-index: 1;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  margin-bottom: 25px;
+}
+
+.we-offer-area.text-center .item i::after {
+  border: 2px solid #00a01d;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  content: "";
+  height: 90px;
+  left: -5px;
+  position: absolute;
+  top: -5px;
+  width: 90px;
+  z-index: -1;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.we-offer-area.item-border-less .item {
+  border: medium none;
+}
+
+.we-offer-area .our-offer-items.less-carousel .equal-height {
+  margin-bottom: 30px;
+}
+
+.we-offer-area.item-border-less .item .number {
+  font-family: "Poppins",sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  opacity: 0.1;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.our-offer-carousel.center-active .owl-item:nth-child(2n) .item,
+.we-offer-area.center-active .single-item:nth-child(2n) .item {
+  background: #00a01d none repeat scroll 0 0;
+}
+
+.our-offer-carousel.center-active .owl-item:nth-child(2n) .item i,
+.our-offer-carousel.center-active .owl-item:nth-child(2n) .item h4,
+.our-offer-carousel.center-active .owl-item:nth-child(2n) .item p,
+.we-offer-area.center-active .single-item:nth-child(2n) .item i,
+.we-offer-area.center-active .single-item:nth-child(2n) .item h4,
+.we-offer-area.center-active .single-item:nth-child(2n) .item p {
+  color: #ffffff;
+}
+
+.we-offer-area .item i {
+  color: #00a01d;
+  display: inline-block;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.we-offer-area .item h4 {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.we-offer-area .item p {
+  margin: 0;
+}
+
+.we-offer-area .item i,
+.we-offer-area .item h4,
+.we-offer-area .item p {
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.we-offer-area .item::after {
+  background: #00a01d none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.we-offer-area .item:hover::after {
+  left: 0;
+}
+
+.we-offer-area .item:hover i,
+.we-offer-area .item:hover h4,
+.we-offer-area .item:hover p {
+  color: #ffffff !important;
+}
+
+.we-offer-area.text-center .item:hover i::after {
+  border-color: #ffffff !important;
+}
+
+.we-offer-area.text-center .item:hover i {
+  background-color: #ffffff !important;
+  color: #00a01d !important;
+}
+
+.we-offer-area.text-left .item i {
+  background: #00a01d none repeat scroll 0 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 60px;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100px;
+  z-index: 1;
+  text-align: center;
+}
+
+.we-offer-area.text-left .item i::after {
+  border: 2px solid #00a01d;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  content: "";
+  height: 120px;
+  left: -10px;
+  position: absolute;
+  top: -10px;
+  width: 120px;
+}
+
+
+#mainNavbar{
+	padding-left:  50px;
+	padding-top: 20px;
+}
+
+.navbar-dark .navbar-brand{
+font-family: 'Source Serif Pro', serif;
+
+}
+
+.navbar-nav .nav-link{
+	font-family: 'Source Serif Pro', serif;
+
+}
+
+
+.navbar.scrolled {
+    background: rgb(34, 31, 31);
+    transition: background 500ms;
+}
+
+.navbar-nav{
+margin-left: 150px;
+}
+
+.nav-link:hover{
+    color: black !important;
+transform: scale(1.3);
+ font-family: monospace;
+ transition: .5s !important;
+
+ border-bottom: 4px solid white;
+ width: 60%;
+ margin-left: 20px;}
+
+    
+.menu{
+  display: none;
+}
+  
+.menu-btn{
+  display: none;
+}
+
+
+.navbar-brand{
+ padding-top: 20px !important;
+}
+.log{
+  width: 5% !important;
+}
+
+
+
+ 
+
+@media screen and (min-width:100px) and (max-width:1200px) {
+     /* navigation */
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+max-width: 1400px;
+margin: auto;
+width: 100%;
+
+}
+
+.navigation .menu-icon{
+cursor: pointer;
+float: right;
+padding: 20px 10px;
+z-index: 103;
+
+
+}
+.nav-link{
+  font-size: 24px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+      header {
+        padding-top: 90px;
+        padding-bottom: 90px;
+
+        background-size: 800px !important;
+      }
+      .uhn {
+        position: relative;
+        margin: 0px !important;
+        padding: 0px !important;
+ 
+      }
+      .too{
+       font-size: 30px !important;
+      }
+      .bot1{
+        padding-top: 20px;
+ 
+      }
+      .bot2{
+        padding-top: 20px;
+ 
+      }
+      .aii{
+        font-size: 18px;
+        padding-top: 3px;
+      }
+
+.navigation .menu-icon .nav-icon{
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    transition: background 0.2s ease-out ;
+
+}
+
+.navigation .menu-icon .nav-icon::before,
+.navigation .menu-icon .nav-icon::after{
+    background-color: #ffffffcc;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all ease-out 0.2s;
+}
+.navigation .menu-icon .nav-icon::before{
+    top: 8px;
+}
+.navigation .menu-icon .nav-icon::after{
+    top: -8px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;;;;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+top: 0px;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top: 0px;
+}
+
+.menu-icon:hover{
+background-color: rgba(0, 0, 0, 0.404) !important;
+border: 0px solid green;
+border-radius: 20%;
+transform: scale(1.3);
+transition: .5s;
+}
+.menu-btn{
+    display: none;
+
+}
+.icon{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* --menu------- */
+.menu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #111111eb;
+    z-index: 102;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation:fade 0.3s;
+}
+.navbar-nav{
+  display: none;
+}
+
+.menu li a{
+    color: #ffffff;
+    margin: 0px 40px;
+    font-size: 2rem;
+    font-family: monoton;
+transition: all ease 0.3s;
+}
+
+.menu li a:hover{
+    font-size: 2.3rem;
+    color: #e70634;
+    transition: all ease 0.3s;
+}
+
+.navigation .menu-btn:checked ~ .menu{
+    display: flex;
+    list-style: none;
+}
+
+@keyframes fade{
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+}
+}
+}
+
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+.menu-icon{
+  margin-left: 400px;
+  background-color: green;
+  border-radius: 20%;
+  margin-top: 30px !important;
+}
+
+.navigation .menu-btn:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+.nav-link:hover{
+    color: green !important;
+transform: scale(1.4);
+ font-family: monospace;
+ transition: .6s !important;
+border-bottom: none;
+ border-left: 4px solid green;
+
+ width: 50%;}
+}
+
+
+@media screen and (min-width:680px) and (max-width:900px) {
+.menu-icon{
+  margin-left: 140px;
+  background-color: green;
+  border-radius: 20%;
+margin-top: 30px !important;
+}
+
+.navigation .menu-btn:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+.nav-link:hover{
+    color: green !important;
+transform: scale(1.4);
+ font-family: monospace;
+ transition: .6s !important;
+border-bottom: none;
+ border-left: 4px solid green;
+
+ width: 50%;}
+}
+
+
+@media screen and (min-width:100px) and (max-width:680px) {
+.menu-icon{
+  margin-left: -50px;
+  background-color: green;
+  border-radius: 20%;
+margin-bottom: 100px !important;
+margin-bottom: 5px !important;
+
+}
+.navigation .menu-btn:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+.navbar-brand{
+ padding-top: 0px !important;
+font-size: 25px !important;
+}
+.nav-link:hover{
+    color: green !important;
+transform: scale(1.4);
+ font-family: monospace;
+ transition: .6s !important;
+border-bottom: none;
+ border-left: 4px solid green;
+
+ width: 50%;}
+ header h1 {
+        font-size: 25px !important;
+      }
+
+}
+
+
+@media screen and (min-width:100px) and (max-width:300px) {
+
+  .navbar-brand{
+ padding-top: 0px !important;
+font-size: 20px !important;
+}
+}
+@media screen and (min-width:100px) and (max-width:900px) {
+.log{
+  width: 60px !important;
+}
+}
+    </style>
+</head>
+<body>
+    
+  <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 bg-success">
+    <a href="#" class ="navbar-brand uhn" style="font-family: fantasy; font-size: 40px; ">Living Proof Church</a>
+    <div>
+      <!-- Navigation -->
+      <nav class="navigation  pt-4">
+    
+        <!-- menu-btn   -->
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+          <span class="nav-icon"></span>
+    
+        </label>
+    
+    
+       
+    
+        <!-- menu -->
+        <ul class="menu">
+          <li class ="nav-item">
+            <a href="./index.html" class="nav-link text-white px-4 fs-5">HOME</a>
+          </li>
+          <li class ="nav-item">
+            <a href="./About.html" class="nav-link text-white px-4 fs-5">ABOUT</a>
+          </li>
+          <li class ="nav-item">
+            <a href="./service.html" class="nav-link text-white px-4 fs-5 fs-5">SERVICES</a>
+          </li>
+          <li class ="nav-item">
+            <a href="./gallery.html" class="nav-link text-white px-4 fs-5">GALLERY</a>
+          </li>
+                    <li class ="nav-item">
+            <a href="./contact.html" class="nav-link text-white px-4 fs-5">CONTACT</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+      <div class ="collapse navbar-collapse" id="navLinks">
+         <ul class ="navbar-nav">
+          <li class ="nav-item">
+            <a href="./index.html" class="nav-link text-white px-4">HOME</a>
+          </li>
+          <li class ="nav-item">
+            <a href="./About.html" class="nav-link text-white px-4">ABOUT</a>
+          </li>
+          <li class ="nav-item">
+            <a href="./service.html" class="nav-link text-white px-4">SERVICES</a>
+          </li>
+          <li class ="nav-item">
+            <a href="./gallery.html" class="nav-link text-white px-4">GALLERY</a>
+          </li>
+                    <li class ="nav-item">
+            <a href="./contact.html" class="nav-link text-white px-4">CONTACT</a>
+          </li>
+          
+      
+        </div> 
+    </nav>
+
+    <header class="text-center">
+
+      <h1 style="font-size: 50px; font-family: serif;"><i>Owe no man anything, but to love one<br> another for he <b
+            class="text-success">that loveth <br> hath fulfilled the law</b> </i><br><br> <span
+          style="font-family: cursive; color: burlywood;">Romans 13:8</span> </h1>
+  
+    </header>
+  
+
+    <section class="we-offer-area text-center bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-heading text-center">
+                        <h2 style="font-weight: 350; font-size: 35px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white;"> <span style="font-weight: 450;font-size: 50px; font-family: cursive;" class="too">Services</span></h2>
+                        <h4 class="text-white">View our activities from Monday to Sunday</h4>
+                    </div>
+                </div>
+            </div>
+                <div class="row our-offer-items less-carousel">
+                    <!-- Single Item -->
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h3 style="text-transform: uppercase;">Sunday</h3>
+                            <p class="fs-5">
+                            <b>TIME:</b> 10.00AM-1.00PM </p>
+
+                         <p class="fs-5">     <b>EVENT:</b> Sunday Worship Service
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item">
+                            <i class="fas fa-dharmachakra"></i>
+                            <h3 style="text-transform: uppercase;">Wednesday</h3>
+                            <p class="fs-5">
+                              <b>TIME:</b> 6.00pm-1.00PM </p>
+
+ <p class="fs-5"> <b>EVENT:</b> Bible Study
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item">
+                            <i class="fas fa-tasks"></i>
+                            <h3 style="text-transform: uppercase;">Friday</h3>
+                            <p class="fs-5">
+                              <b>TIME:</b> 6.00AM-7.00PM </p>
+
+  <p class="fs-5"> <b>EVENT:</b> Prayer Meeting
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h3>WEDNESDAY-FRIDAY</h3>
+                              Month End
+                            <p class="fs-5">
+                              <b>TIME:</b> 6.00AM-7.00PM
+</p>
+                           <p class="fs-5">   <b>EVENT:</b> Prayer Meeting
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item">
+                            <i class="fas fa-recycle"></i>
+                            <h3>FIRST FRIDAY</h3>
+                              Month Start
+                            <p class="fs-5">
+                              <b>TIME:</b>10.00AM-12.00AM
+</p>
+<p class="fs-5"> <b>EVENT:</b> Night Vigil
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item">
+                            <i class="fas fa-headset"></i>
+                            <h3>FIRST SUNDAY</h3>
+                              Month Start
+                            <p class="fs-5">
+                              <b>TIME:</b> 10.00AM-2.00PM </p>
+
+   <p class="fs-5"> <b>EVENT:</b>  Thanksgiving Service</p>
+                           
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+        </div>
+    </section>
+
+
+    <div>
+      <div class="mt-5 text-center bg-white pl-0">
+          <div >
+              <h1 class="py-5 fs-1 text-success">Highlights</h1><hr>
+      <div class="d-flex justify-content-evenly">
+          <div class="">
+              <h4 class="bot">DAYS</h4>
+          <p>Sunday</p>
+          <p class="bot1">Wednesday</p>
+        <p class="bot2"> Friday</p> 
+          </div>
+          <div>
+              <h4 class="aii">TIME RANGE</h4>
+          <p>10.00am-1.00pm</p>
+          <p>6.00pm-7.00pm</p>
+          <p>6.00pm-7.00pm</p>
+          </div>
+          <div class="me-5">
+              <h4 class="bot">Event</h4>
+      <p>Sunday Worship Service</p>
+      <p>Bible Study</p>
+      <p>Prayer Meeting</p>
+          </div>
+      </div>
+      </div></div>
+      
+
+
+
+      
+</body>
+</html>
